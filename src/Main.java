@@ -7,6 +7,21 @@ import java.util.Map;
 public class Main {
     public static void main(String[] args) {
 
+        //******** שאלה 1 ***********
+        System.out.println("שאלה 1");
+        char[][] grid = {
+                { 'R', '.', '.', '.' },
+                { '#', '#', '.', '.' },
+                { '.', '.', 'R', '.' },
+                { '.', '#', '#', 'R' }
+        };
+
+        List<RobotGrid.Point> robots = RobotGrid.findRobots(grid);
+        RobotGrid.Point best = RobotGrid.findBestMeetingPoint(grid, robots);
+
+        System.out.println("נקודת המפגש הקצרה ביותר היא *: ");
+        RobotGrid.printGridWithBest(grid, best);
+
         //******* שאלה 2 **********
         // יוצרים עץ לדוגמה עם 7 צמתים
         TreeDiameter.Tree tree = new TreeDiameter.Tree(7);
